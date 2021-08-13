@@ -13,5 +13,9 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   extends: ['airbnb-typescript/base'],
-  rules: {},
+  rules: {
+    'consistent-return': 0,
+    'no-unused-vars': 1,
+    '@typescript-eslint/no-unused-vars': 1,
+  },
 };
