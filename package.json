@@ -4,9 +4,12 @@
   "description": "Mono repo for 13 card app using React and NodeJS",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
     "start": "npm run start --prefix server ",
     "dev": "npm run dev --prefix server",
     "bootstrap": "lerna bootstrap",
+    "precommit": "lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents",
+    "prepush": "lerna run --concurrency 1 --stream test --since HEAD --exclude-dependents",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +24,7 @@
   "homepage": "https://github.com/williamstyronejr/13cards-react#readme",
   "devDependencies": {
     "concurrently": "^6.2.1",
+    "husky": "^7.0.1",
     "lerna": "^4.0.0"
   }
 }
