@@ -6,7 +6,7 @@
   "scripts": {
     "prepare": "husky install",
     "start": "npm run start --prefix server ",
-    "dev": "npm run dev --prefix server",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run start --prefix client\"",
     "start:prod": "npm run production --prefix server",
     "build": "lerna run --concurrency 1 --stream build",
     "bootstrap": "lerna bootstrap",
