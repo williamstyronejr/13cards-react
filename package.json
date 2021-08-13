@@ -1,0 +1,26 @@
+{
+  "name": "13cards-react",
+  "version": "0.0.1",
+  "description": "Mono repo for 13 card app using React and NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start --prefix server ",
+    "dev": "npm run dev --prefix server",
+    "bootstrap": "lerna bootstrap",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamstyronejr/13cards-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williamstyronejr/13cards-react/issues"
+  },
+  "homepage": "https://github.com/williamstyronejr/13cards-react#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "lerna": "^4.0.0"
+  }
+}
