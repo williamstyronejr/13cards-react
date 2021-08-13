@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack serve --open",
     "precommit": "lint-staged",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "build": "webpack --mode=production",
+    "cypress": "cypress open",
+    "test": "jest --passWithNoTests"
   },
   "author": "",
   "license": "ISC",
@@ -17,13 +19,17 @@
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
+    "@types/jest": "^26.0.24",
     "@types/react": "^17.0.17",
     "@types/react-dom": "^17.0.9",
     "@types/react-router-dom": "^5.1.8",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
+    "babel-jest": "^27.0.6",
     "css-loader": "^6.2.0",
+    "cypress": "^8.2.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-plugin-import": "^2.24.0",
@@ -31,9 +37,11 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.0.6",
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "style-loader": "^3.2.1",
+    "ts-jest": "^27.0.4",
     "ts-loader": "^9.2.5",
     "typescript": "^4.3.5",
     "webpack": "^5.50.0",
@@ -41,7 +49,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "lint-staged": {
-    "src/*.tsx": [
+    "src/**/*.tsx": [
       "eslint --fix",
       "prettier --write"
     ]

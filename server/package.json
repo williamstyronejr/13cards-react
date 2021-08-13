@@ -43,7 +43,7 @@
     "winston": "^3.3.3"
   },
   "lint-staged": {
-    "src/*.ts": [
+    "src/**/*.ts": [
       "eslint --fix",
       "prettier --write"
     ]

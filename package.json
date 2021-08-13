@@ -9,8 +9,7 @@
     "dev": "npm run dev --prefix server",
     "bootstrap": "lerna bootstrap",
     "precommit": "lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents",
-    "prepush": "lerna run --concurrency 1 --stream test --since HEAD --exclude-dependents",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepush": "lerna run --concurrency 1 --stream test --since HEAD --exclude-dependents"
   },
   "repository": {
     "type": "git",
