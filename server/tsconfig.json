@@ -8,5 +8,6 @@
     "rootDir": "./",
     "strict": true,
     "esModuleInterop": true
-  }
+  },
+  "exclude": ["src/**/tests", "dist/**"]
 }

@@ -8,5 +8,6 @@
     "rootDir": "./",
     "allowJs": true,
     "moduleResolution": "Node"
-  }
+  },
+  "exclude": ["src/**/tests", "dist/**"]
 }
