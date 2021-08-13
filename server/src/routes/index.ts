@@ -9,7 +9,16 @@ export default function setupRoutes(app: Application) {
   app.use('/*', (req, res, next) => {
     try {
       res.sendFile(
-        path.join(__dirname, '..', '..', '..', 'client', 'build', 'index.html'),
+        path.join(
+          __dirname,
+          '..',
+          '..',
+          '..',
+          '..',
+          'client',
+          'dist',
+          'index.html',
+        ),
       );
     } catch (err) {
       next({

@@ -1,8 +1,16 @@
-import express, { Request, Response } from "express";
-import setupRoutes from "../routes/index";
-import logger from "./logger";
+import path from 'path';
+import express, { Request, Response } from 'express';
+import setupRoutes from '../routes/index';
+import logger from './logger';
 
 const app = express();
+
+app.use(
+  '/static',
+  express.static(
+    path.join(__dirname, '..', '..', '..', '..', 'client', 'dist', 'static'),
+  ),
+);
 
 setupRoutes(app);
 
@@ -11,13 +19,12 @@ app.use(
     err: { status?: Number; msg?: string; stack?: string },
     req: Request,
     res: Response,
-    next: Function
   ) => {
     if (!err) {
-      logger.error("Error handler reach without error.");
+      logger.error('Error handler reach without error.');
       return res
         .status(500)
-        .send("An error has occurred on the server, please try again.");
+        .send('An error has occurred on the server, please try again.');
     }
 
     logger.error(err);
@@ -29,8 +36,8 @@ app.use(
       default:
         res
           .status(500)
-          .send("An error has occurred on the server, please try again.");
+          .send('An error has occurred on the server, please try again.');
     }
-  }
+  },
 );
 export default app;
