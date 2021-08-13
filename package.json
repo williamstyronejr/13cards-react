@@ -7,9 +7,12 @@
     "prepare": "husky install",
     "start": "npm run start --prefix server ",
     "dev": "npm run dev --prefix server",
+    "start:prod": "npm run production --prefix server",
+    "build": "lerna run --concurrency 1 --stream build",
     "bootstrap": "lerna bootstrap",
     "precommit": "lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents",
-    "prepush": "lerna run --concurrency 1 --stream test --since HEAD --exclude-dependents"
+    "prepush": "lerna run --concurrency 1 --stream test --since HEAD --exclude-dependents",
+    "heroku-postbuild": "npm run bootstrap && npm run build"
   },
   "repository": {
     "type": "git",
