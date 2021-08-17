@@ -6,7 +6,7 @@ module.exports = {
     jest: true,
   },
   parserOptions: {
-    project: 'tsconfig.json',
+    project: 'tsconfig.eslint.json',
     tsconfigRootDir: __dirname,
     sourceType: 'module',
   },
@@ -16,6 +16,10 @@ module.exports = {
   rules: {
     'consistent-return': 0,
     'no-unused-vars': 1,
+    'object-curly-newline': 0,
+
+    'import/prefer-default-export': 0,
+
     '@typescript-eslint/no-unused-vars': 1,
   },
 };
