@@ -10,5 +10,8 @@ module.exports = {
   extends: ['airbnb-typescript'],
   rules: {
     'arrow-body-style': 0,
+
+    'react/prop-types': 0,
+    'react/jsx-props-no-spreading': 0,
   },
 };
