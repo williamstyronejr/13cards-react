@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-font: #2f2f2f;
+  --color-font-subtle: #e0e0e0;
+  --color-font-background: #efefef;
+  --color-background: rgb(49, 98, 220);
+  --color-background-gradient: linear-gradient(
+    180deg,
+    rgba(49, 98, 220, 1) 0%,
+    rgb(20, 206, 209) 100%
+  );
+  --color-btn-submit: #2a2d34;
+  --color-btn-submit-hover: #3c3e42;
+  --color-dialog-background: #efefef;
+  --color-dialog-inner: #ffffff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+  background: var(--color-background-gradient);
+  color: var(--color-font);
+}
+
+button {
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
