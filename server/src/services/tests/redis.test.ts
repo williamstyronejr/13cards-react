@@ -29,27 +29,28 @@ afterAll((done) => {
 describe('Game Lobbies', () => {
   test('Creating game lobby', async () => {
     const lobbyName = generateString(8);
-    const owner = 'player2';
-    const result = await createLobby(lobbyName, owner);
+    const playerName = generateString(8);
+    const result = await createLobby(lobbyName, playerName);
 
     expect(result).toBeTruthy();
   });
 
   test('Creating a lobby with the same name should return false', async () => {
     const lobbyName = generateString(8);
-    const owner = 'player1';
+    const playerName1 = generateString(8);
+    const playerName2 = generateString(8);
 
-    await createLobby(lobbyName, owner);
-    const result = await createLobby(lobbyName, owner);
+    await createLobby(lobbyName, playerName1);
+    const result = await createLobby(lobbyName, playerName2);
 
     expect(result).toBeFalsy();
   });
 
   test('Deleting a existing lobby should return true', async () => {
     const lobbyName = generateString(8);
-    const owner = 'test';
+    const playerName = generateString(8);
 
-    await createLobby(lobbyName, owner);
+    await createLobby(lobbyName, playerName);
     const result = await deleteLobby(lobbyName);
 
     expect(result).toBeTruthy();
