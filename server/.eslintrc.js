@@ -17,6 +17,9 @@ module.exports = {
     'consistent-return': 0,
     'no-unused-vars': 1,
     'object-curly-newline': 0,
+    'arrow-body-style': 0,
+    'operator-linebreak': 0,
+    'no-await-in-loop': 1,
 
     'import/prefer-default-export': 0,
 
