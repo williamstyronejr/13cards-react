@@ -1,5 +1,5 @@
-import { Server, Socket } from "socket.io";
-import logger from "./logger";
+import { Server, Socket } from 'socket.io';
+import logger from './logger';
 
 let io: Server | null;
 
@@ -9,14 +9,14 @@ let io: Server | null;
  */
 export function setUpSocket(httpServer: Object) {
   io = new Server(httpServer);
-  logger.info("Socket server initialized");
+  logger.info('Socket server initialized');
 
-  io.on("connection", (client) => {});
+  io.on('connection', (client) => {});
 }
 
 /**
  * Closes socket server.
  */
 export function closeSocketServer() {
-  io ? io.close() : null;
+  if (io) io.close();
 }
